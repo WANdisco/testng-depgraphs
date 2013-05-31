@@ -4,6 +4,10 @@ Reporter plug-in for TestNG that generates graph visualisations of test dependen
 
 For each of your TestNG test suites, testng-depgraphs will generate a file that contains a dot language directed graph of all the test method and group dependencies that are specified in your code. If you have the GraphViz command line tools installed it will also generate a PNG image of the graph.
 
+<p align="center">
+  <img src="https://github.com/WANdisco/testng-depgraphs/blob/master/example.png?raw=true" alt="Portion of an example graph image"/>
+</p>
+
 Blue squares are test groups. Green, yellow and red squares are passed, skipped and failed test methods, respectively. The arrows show the direction of the dependencies.
 
 ## Usage
