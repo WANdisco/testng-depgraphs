@@ -10,6 +10,12 @@ For each of your TestNG test suites, testng-depgraphs will generate a file that 
 
 Blue squares are test groups. Green, yellow and red squares are passed, skipped and failed test methods, respectively. The arrows show the direction of the dependencies.
 
+## Building
+
+    $ git clone git@github.com:WANdisco/testng-depgraphs.git
+    $ cd testng-depgraphs
+    $ mvn clean install
+
 ## Usage
 
 Simply add testng-depgraphs as a test dependency in your Maven POM file:
