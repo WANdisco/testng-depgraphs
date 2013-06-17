@@ -154,8 +154,17 @@ public class DependencyGraphReporter implements IReporter {
       // Attempt to generate image from dot file
       File outputPng = new File(suite.getOutputDirectory(), OUTPUT_FILENAME + ".png");
       String[] args = new String[] { "dot", "-Tpng", "-o" + outputPng.getAbsolutePath(), outputDot.getAbsolutePath() };
+      ProcessBuilder pb = new ProcessBuilder(args);
       try {
-        Runtime.getRuntime().exec(args);
+        Process process = pb.start();
+        int exit = -1;
+        try {
+          exit = process.waitFor();
+        } catch (InterruptedException e) {
+        }
+        if (exit != 0) {
+          throw new IOException("Exited with code: " + exit);
+        }
       } catch (IOException e) {
         System.err.println("Error executing dot command: " + e.getMessage());
         StringBuilder command = new StringBuilder();
