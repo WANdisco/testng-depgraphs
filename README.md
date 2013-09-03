@@ -23,7 +23,7 @@ Simply add testng-depgraphs as a test dependency in your Maven POM file:
     <dependency>
       <groupId>com.wandisco</groupId>
       <artifactId>testng-depgraphs</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0</version>
       <scope>test</scope>
     </dependency>
 
