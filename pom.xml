@@ -21,6 +21,13 @@
   <artifactId>testng-depgraphs</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
   <name>TestNG Dependency Graphs</name>
   <description>Reporter plug-in for TestNG that generates graph visualisations of test dependencies.</description>
   <url>https://github.com/WANdisco/testng-depgraphs</url>
